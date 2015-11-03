@@ -9,8 +9,6 @@
  */
 
 // Predefine the variables below in order to alter and enable specific features.
-$inuit-flag-namespace:          $inuit-namespace !default;
-
 $inuit-flag-gutter:             $inuit-base-spacing-unit !default;
 $inuit-flag-gutter--tiny:         quarter($inuit-flag-gutter) !default;
 $inuit-flag-gutter--small:          halve($inuit-flag-gutter) !default;
@@ -37,8 +35,7 @@ $inuit-flag-collapse-at:        720px !default;
  * 2. Force the object to be the full width of its parent. Combined with [1],
  *    this makes the object behave in a quasi-`display: block;` manner.
  */
-.#{$inuit-flag-namespace}o-flag,
-%#{$inuit-flag-namespace}o-flag {
+.o-flag {
     display: table; /* [1] */
     width: 100%; /* [2] */
 }
@@ -48,10 +45,8 @@ $inuit-flag-collapse-at:        720px !default;
      *
      * 1. Default to aligning content to their middles.
      */
-    .#{$inuit-flag-namespace}o-flag__img,
-    %#{$inuit-flag-namespace}o-flag__img,
-    .#{$inuit-flag-namespace}o-flag__body,
-    %#{$inuit-flag-namespace}o-flag__body {
+    .o-flag__img,
+    .o-flag__body {
         display: table-cell;
         vertical-align: middle; /* [1] */
     }
@@ -59,8 +54,7 @@ $inuit-flag-collapse-at:        720px !default;
     /**
      * Flag images have a space between them and the body of the object.
      */
-    .#{$inuit-flag-namespace}o-flag__img,
-    %#{$inuit-flag-namespace}o-flag__img {
+    .o-flag__img {
         padding-right: $inuit-flag-gutter;
 
         > img {
@@ -75,8 +69,7 @@ $inuit-flag-collapse-at:        720px !default;
      *
      * 1. Forces the `.flag__body` to take up all remaining space.
      */
-    .#{$inuit-flag-namespace}o-flag__body,
-    %#{$inuit-flag-namespace}o-flag__body {
+    .o-flag__body {
         width: 100%; /* [1] */
 
         &,
@@ -96,11 +89,9 @@ $inuit-flag-collapse-at:        720px !default;
      * Tiny flags.
      */
 
-    .#{$inuit-flag-namespace}o-flag--tiny,
-    %#{$inuit-flag-namespace}o-flag--tiny {
+    .o-flag--tiny {
 
-        > .#{$inuit-flag-namespace}o-flag__img,
-        > %#{$inuit-flag-namespace}o-flag__img {
+        > .o-flag__img {
             padding-right: $inuit-flag-gutter--tiny;
         }
 
@@ -110,11 +101,9 @@ $inuit-flag-collapse-at:        720px !default;
              * Tiny reversed flags.
              */
 
-            &.#{$inuit-flag-namespace}o-flag--rev,
-            &%#{$inuit-flag-namespace}o-flag--rev {
+            &.o-flag--rev {
 
-                > .#{$inuit-flag-namespace}o-flag__img,
-                > %#{$inuit-flag-namespace}o-flag__img {
+                > .o-flag__img {
                     padding-right: 0;
                     padding-left:  $inuit-flag-gutter--tiny;
                 }
@@ -133,11 +122,9 @@ $inuit-flag-collapse-at:        720px !default;
      * Small flags.
      */
 
-    .#{$inuit-flag-namespace}o-flag--small,
-    %#{$inuit-flag-namespace}o-flag--small {
+    .o-flag--small {
 
-        > .#{$inuit-flag-namespace}o-flag__img,
-        > %#{$inuit-flag-namespace}o-flag__img {
+        > .o-flag__img {
             padding-right: $inuit-flag-gutter--small;
         }
 
@@ -147,11 +134,9 @@ $inuit-flag-collapse-at:        720px !default;
              * Small reversed flags.
              */
 
-            &.#{$inuit-flag-namespace}o-flag--rev,
-            &%#{$inuit-flag-namespace}o-flag--rev {
+            &.o-flag--rev {
 
-                > .#{$inuit-flag-namespace}o-flag__img,
-                > %#{$inuit-flag-namespace}o-flag__img {
+                > .o-flag__img {
                     padding-right: 0;
                     padding-left:  $inuit-flag-gutter--small;
                 }
@@ -170,11 +155,9 @@ $inuit-flag-collapse-at:        720px !default;
      * Large flags.
      */
 
-    .#{$inuit-flag-namespace}o-flag--large,
-    %#{$inuit-flag-namespace}o-flag--large {
+    .o-flag--large {
 
-        > .#{$inuit-flag-namespace}o-flag__img,
-        > %#{$inuit-flag-namespace}o-flag__img {
+        > .o-flag__img {
             padding-right: $inuit-flag-gutter--large;
         }
 
@@ -184,11 +167,9 @@ $inuit-flag-collapse-at:        720px !default;
              * Large reversed flags.
              */
 
-            &.#{$inuit-flag-namespace}o-flag--rev,
-            &%#{$inuit-flag-namespace}o-flag--rev {
+            &.o-flag--rev {
 
-                > .#{$inuit-flag-namespace}o-flag__img,
-                > %#{$inuit-flag-namespace}o-flag__img {
+                > .o-flag__img {
                     padding-right: 0;
                     padding-left:  $inuit-flag-gutter--large;
                 }
@@ -207,11 +188,9 @@ $inuit-flag-collapse-at:        720px !default;
      * Huge flags.
      */
 
-    .#{$inuit-flag-namespace}o-flag--huge,
-    %#{$inuit-flag-namespace}o-flag--huge {
+    .o-flag--huge {
 
-        > .#{$inuit-flag-namespace}o-flag__img,
-        > %#{$inuit-flag-namespace}o-flag__img {
+        > .o-flag__img {
             padding-right: $inuit-flag-gutter--huge;
         }
 
@@ -221,11 +200,9 @@ $inuit-flag-collapse-at:        720px !default;
              * Huge reversed flags.
              */
 
-            &.#{$inuit-flag-namespace}o-flag--rev,
-            &%#{$inuit-flag-namespace}o-flag--rev {
+            &.o-flag--rev {
 
-                > .#{$inuit-flag-namespace}o-flag__img,
-                > %#{$inuit-flag-namespace}o-flag__img {
+                > .o-flag__img {
                     padding-right: 0;
                     padding-left:  $inuit-flag-gutter--huge;
                 }
@@ -253,19 +230,15 @@ $inuit-flag-collapse-at:        720px !default;
      * 3. Reassign margins to the correct sides.
      */
 
-    .#{$inuit-flag-namespace}o-flag--rev,
-    %#{$inuit-flag-namespace}o-flag--rev {
+    .o-flag--rev {
         direction: rtl; /* [1] */
 
-        > .#{$inuit-flag-namespace}o-flag__img,
-        > %#{$inuit-flag-namespace}o-flag__img,
-        > .#{$inuit-flag-namespace}o-flag__body,
-        > %#{$inuit-flag-namespace}o-flag__body {
+        > .o-flag__img,
+        > .o-flag__body {
             direction: ltr; /* [2] */
         }
 
-        > .#{$inuit-flag-namespace}o-flag__img,
-        > %#{$inuit-flag-namespace}o-flag__img {
+        > .o-flag__img {
             padding-right: 0; /* [3] */
             padding-left: $inuit-flag-gutter; /* [3] */
         }
@@ -284,11 +257,9 @@ $inuit-flag-collapse-at:        720px !default;
      * Flush flag objects have no space between the image- and text-content.
      */
 
-    .#{$inuit-flag-namespace}o-flag--flush,
-    %#{$inuit-flag-namespace}o-flag--flush {
+    .o-flag--flush {
 
-        > .#{$inuit-flag-namespace}o-flag__img,
-        > %#{$inuit-flag-namespace}o-flag__img {
+        > .o-flag__img {
             padding-right: 0;
             padding-left:  0;
         }
@@ -307,13 +278,10 @@ $inuit-flag-collapse-at:        720px !default;
      * Vertically top aligned flag objects.
      */
 
-    .#{$inuit-flag-namespace}o-flag--top,
-    %#{$inuit-flag-namespace}o-flag--top {
+    .o-flag--top {
 
-        > .#{$inuit-flag-namespace}o-flag__img,
-        > %#{$inuit-flag-namespace}o-flag__img,
-        > .#{$inuit-flag-namespace}o-flag__body,
-        > %#{$inuit-flag-namespace}o-flag__body {
+        > .o-flag__img,
+        > .o-flag__body {
             vertical-align: top;
         }
 
@@ -327,13 +295,10 @@ $inuit-flag-collapse-at:        720px !default;
      * Vertically bottom aligned flag objects.
      */
 
-    .#{$inuit-flag-namespace}o-flag--bottom,
-    %#{$inuit-flag-namespace}o-flag--bottom {
+    .o-flag--bottom {
 
-        > .#{$inuit-flag-namespace}o-flag__img,
-        > %#{$inuit-flag-namespace}o-flag__img,
-        > .#{$inuit-flag-namespace}o-flag__body,
-        > %#{$inuit-flag-namespace}o-flag__body {
+        > .o-flag__img,
+        > .o-flag__body {
             vertical-align: bottom;
         }
 
@@ -361,8 +326,7 @@ $inuit-flag-collapse-at:        720px !default;
 
     @media screen and (max-width: $inuit-flag-collapse-at) {
 
-        .#{$inuit-flag-namespace}o-flag--responsive,
-        %#{$inuit-flag-namespace}o-flag--responsive {
+        .o-flag--responsive {
 
             @if ($inuit-enable-flag--rev == true) {
 
@@ -374,18 +338,15 @@ $inuit-flag-collapse-at:        720px !default;
             }
 
             &,
-            > .#{$inuit-flag-namespace}o-flag__img,
-            > %#{$inuit-flag-namespace}o-flag__img,
-            > .#{$inuit-flag-namespace}o-flag__body,
-            > %#{$inuit-flag-namespace}o-flag__body {
+            > .o-flag__img,
+            > .o-flag__body {
                 display: block;
             }
 
             /**
              * Rework the spacings on regular flag objects.
              */
-            > .#{$inuit-flag-namespace}o-flag__img,
-            > %#{$inuit-flag-namespace}o-flag__img {
+            > .o-flag__img {
                 padding-right: 0;
                 padding-left:  0;
                 margin-bottom: $inuit-flag-gutter;
@@ -401,11 +362,9 @@ $inuit-flag-collapse-at:        720px !default;
                  * state.
                  */
 
-                &.#{$inuit-flag-namespace}o-flag--tiny,
-                &%#{$inuit-flag-namespace}o-flag--tiny {
+                &.o-flag--tiny {
 
-                    > .#{$inuit-flag-namespace}o-flag__img,
-                    > %#{$inuit-flag-namespace}o-flag__img {
+                    > .o-flag__img {
                         padding-right: 0;
                         padding-left:  0;
                         margin-bottom: $inuit-flag-gutter--tiny;
@@ -425,11 +384,9 @@ $inuit-flag-collapse-at:        720px !default;
                  * state.
                  */
 
-                &.#{$inuit-flag-namespace}o-flag--small,
-                &%#{$inuit-flag-namespace}o-flag--small {
+                &.o-flag--small {
 
-                    > .#{$inuit-flag-namespace}o-flag__img,
-                    > %#{$inuit-flag-namespace}o-flag__img {
+                    > .o-flag__img {
                         padding-right: 0;
                         padding-left:  0;
                         margin-bottom: $inuit-flag-gutter--small;
@@ -449,11 +406,9 @@ $inuit-flag-collapse-at:        720px !default;
                  * state.
                  */
 
-                &.#{$inuit-flag-namespace}o-flag--large,
-                &%#{$inuit-flag-namespace}o-flag--large {
+                &.o-flag--large {
 
-                    > .#{$inuit-flag-namespace}o-flag__img,
-                    > %#{$inuit-flag-namespace}o-flag__img {
+                    > .o-flag__img {
                         padding-right: 0;
                         padding-left:  0;
                         margin-bottom: $inuit-flag-gutter--large;
@@ -473,11 +428,9 @@ $inuit-flag-collapse-at:        720px !default;
                  * state.
                  */
 
-                &.#{$inuit-flag-namespace}o-flag--huge,
-                &%#{$inuit-flag-namespace}o-flag--huge {
+                &.o-flag--huge {
 
-                    > .#{$inuit-flag-namespace}o-flag__img,
-                    > %#{$inuit-flag-namespace}o-flag__img {
+                    > .o-flag__img {
                         padding-right: 0;
                         padding-left:  0;
                         margin-bottom: $inuit-flag-gutter--huge;
