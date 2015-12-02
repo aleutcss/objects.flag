@@ -9,7 +9,7 @@
  */
 
 // Predefine the variables below in order to alter and enable specific features.
-$inuit-flag-gutter:             $inuit-base-spacing-unit !default;
+$inuit-flag-gutter:             $spacing !default;
 $inuit-flag-gutter--tiny:         quarter($inuit-flag-gutter) !default;
 $inuit-flag-gutter--small:          halve($inuit-flag-gutter) !default;
 $inuit-flag-gutter--large:         double($inuit-flag-gutter) !default;
