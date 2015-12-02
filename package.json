@@ -1,5 +1,5 @@
 {
-  "name": "aleut-flag",
+  "name": "@aleut/aleut-flag",
   "version": "0.4.0",
   "description": "The aleutcss framework’s flag object (based on Harry Roberts inuitcss framework)",
   "main": "_objects.flag.scss",
