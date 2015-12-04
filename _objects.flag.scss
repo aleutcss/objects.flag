@@ -15,15 +15,15 @@ $o-flag-gutter--small:          halve($o-flag-gutter) !default;
 $o-flag-gutter--large:         double($o-flag-gutter) !default;
 $o-flag-gutter--huge:       quadruple($o-flag-gutter) !default;
 
-$o-enable-flag--tiny:       false !default;
-$o-enable-flag--small:      false !default;
-$o-enable-flag--large:      false !default;
-$o-enable-flag--huge:       false !default;
-$o-enable-flag--rev:        false !default;
-$o-enable-flag--flush:      false !default;
-$o-enable-flag--top:        false !default;
-$o-enable-flag--bottom:     false !default;
-$o-enable-flag--responsive: false !default;
+$o-flag--tiny:       false !default;
+$o-flag--small:      false !default;
+$o-flag--large:      false !default;
+$o-flag--huge:       false !default;
+$o-flag--rev:        false !default;
+$o-flag--flush:      false !default;
+$o-flag--top:        false !default;
+$o-flag--bottom:     false !default;
+$o-flag--responsive: false !default;
 $o-flag-collapse-at:        720px !default;
 
 
@@ -83,7 +83,7 @@ $o-flag-collapse-at:        720px !default;
 
 
 
-@if ($o-enable-flag--tiny == true) {
+@if ($o-flag--tiny == true) {
 
     /**
      * Tiny flags.
@@ -95,7 +95,7 @@ $o-flag-collapse-at:        720px !default;
             padding-right: $o-flag-gutter--tiny;
         }
 
-        @if ($o-enable-flag--rev == true) {
+        @if ($o-flag--rev == true) {
 
             /**
              * Tiny reversed flags.
@@ -116,7 +116,7 @@ $o-flag-collapse-at:        720px !default;
 
 }
 
-@if ($o-enable-flag--small == true) {
+@if ($o-flag--small == true) {
 
     /**
      * Small flags.
@@ -128,7 +128,7 @@ $o-flag-collapse-at:        720px !default;
             padding-right: $o-flag-gutter--small;
         }
 
-        @if ($o-enable-flag--rev == true) {
+        @if ($o-flag--rev == true) {
 
             /**
              * Small reversed flags.
@@ -149,7 +149,7 @@ $o-flag-collapse-at:        720px !default;
 
 }
 
-@if ($o-enable-flag--large == true) {
+@if ($o-flag--large == true) {
 
     /**
      * Large flags.
@@ -161,7 +161,7 @@ $o-flag-collapse-at:        720px !default;
             padding-right: $o-flag-gutter--large;
         }
 
-        @if ($o-enable-flag--rev == true) {
+        @if ($o-flag--rev == true) {
 
             /**
              * Large reversed flags.
@@ -182,7 +182,7 @@ $o-flag-collapse-at:        720px !default;
 
 }
 
-@if ($o-enable-flag--huge == true) {
+@if ($o-flag--huge == true) {
 
     /**
      * Huge flags.
@@ -194,7 +194,7 @@ $o-flag-collapse-at:        720px !default;
             padding-right: $o-flag-gutter--huge;
         }
 
-        @if ($o-enable-flag--rev == true) {
+        @if ($o-flag--rev == true) {
 
             /**
              * Huge reversed flags.
@@ -219,7 +219,7 @@ $o-flag-collapse-at:        720px !default;
 
 
 
-@if ($o-enable-flag--rev == true) {
+@if ($o-flag--rev == true) {
 
     /**
      * Reversed flag objects have their image-content to the right, and text-content
@@ -251,7 +251,7 @@ $o-flag-collapse-at:        720px !default;
 
 
 
-@if ($o-enable-flag--flush == true) {
+@if ($o-flag--flush == true) {
 
     /**
      * Flush flag objects have no space between the image- and text-content.
@@ -272,7 +272,7 @@ $o-flag-collapse-at:        720px !default;
 
 
 
-@if ($o-enable-flag--top == true) {
+@if ($o-flag--top == true) {
 
     /**
      * Vertically top aligned flag objects.
@@ -289,7 +289,7 @@ $o-flag-collapse-at:        720px !default;
 
 }
 
-@if ($o-enable-flag--bottom == true) {
+@if ($o-flag--bottom == true) {
 
     /**
      * Vertically bottom aligned flag objects.
@@ -309,7 +309,7 @@ $o-flag-collapse-at:        720px !default;
 
 
 
-@if ($o-enable-flag--responsive == true) {
+@if ($o-flag--responsive == true) {
 
     /**
      * Responsive flag objects.
@@ -328,7 +328,7 @@ $o-flag-collapse-at:        720px !default;
 
         .o-flag--responsive {
 
-            @if ($o-enable-flag--rev == true) {
+            @if ($o-flag--rev == true) {
 
                 /**
                  * Disable reversal of content because there is no concept of
@@ -352,7 +352,7 @@ $o-flag-collapse-at:        720px !default;
                 margin-bottom: $o-flag-gutter;
             }
 
-            @if ($o-enable-flag--tiny == true) {
+            @if ($o-flag--tiny == true) {
 
                 /**
                  * Tiny responsive flags.
@@ -374,7 +374,7 @@ $o-flag-collapse-at:        720px !default;
 
             }
 
-            @if ($o-enable-flag--small == true) {
+            @if ($o-flag--small == true) {
 
                 /**
                  * Small responsive flags.
@@ -396,7 +396,7 @@ $o-flag-collapse-at:        720px !default;
 
             }
 
-            @if ($o-enable-flag--large == true) {
+            @if ($o-flag--large == true) {
 
                 /**
                  * Large responsive flags.
@@ -418,7 +418,7 @@ $o-flag-collapse-at:        720px !default;
 
             }
 
-            @if ($o-enable-flag--huge == true) {
+            @if ($o-flag--huge == true) {
 
                 /**
                  * Huge responsive flags.
