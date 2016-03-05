@@ -7,7 +7,7 @@ more advanced functionality like vertical alignment. The flag-object is a bit mo
 
 ## Install using npm:
 
-```ssh
+```shell
     $ npm install --save-dev aleut-flag
 ```
 
