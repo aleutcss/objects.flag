@@ -6,6 +6,7 @@ more advanced functionality like vertical alignment. The flag-object is a bit mo
 
 
 ## Install using npm:
+
 ```ssh
     $ npm install --save-dev aleut-flag
 ```
@@ -13,6 +14,7 @@ more advanced functionality like vertical alignment. The flag-object is a bit mo
 ## Usage
 
 Basic usage of the flag-object uses the required classes:
+
 ```html
 <div class="o-flag">
     <div class="o-flag__img">
@@ -38,6 +40,7 @@ Other, optional classes can supplement the required base classes:
 * `.o-flag--responsive`: If the flag-object should break with image over the text on a breakpoint.
 
 For example:
+
 ```html
 <div class="o-flag o-flag--rev o-flag--small">
     <div class="o-flag__img">
@@ -67,6 +70,7 @@ $o-flag--responsive: false !default;
 
 ### Modify options
 To modify the breakpoint of `.o-flag--responsive` you can change this variable and set it to your preferred option before you import the `_objects.flag.scss`-file.
+
 ```scss
 $o-flag-collapse-at:        720px !default;
 ```
