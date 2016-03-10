@@ -8,7 +8,8 @@ more advanced functionality like vertical alignment. The flag-object is a bit mo
 ## Install using npm:
 
 ```shell
-    $ npm install --save-dev @aleut/objects.flag
+    $ npm install --save-dev aleut.objects.flag
+
 ```
 
 ## Usage
